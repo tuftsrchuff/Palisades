@@ -1,0 +1,190 @@
+/*Nav bar, do not edit */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #04437A;
+    color: #fdb915;
+    display: flex;
+    z-index: 1;
+    border-bottom: 5px solid #fdb915;
+    font-family: 'Nunito', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    font-size:20px;
+    padding: 0 20px;
+}
+
+.drop-nav a{
+    text-decoration: none;
+    color: #fdb915;
+}
+
+.icon-nav-link{
+    margin-right: auto;
+}
+
+a img{
+    width: 125px;
+    padding: 5px;
+}
+
+li{
+    line-height: 95px;
+    vertical-align: center;
+}
+
+.subnav{
+    position: absolute;
+    background-color: #04437A;
+    z-index: 1;
+    display: none;
+}
+
+.drop-nav{
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 48px;
+    
+}
+
+.drop-nav:hover .subnav {
+    display: block;
+    font-size: 20px;
+    max-width: 20%;
+    text-align: center;
+    
+}
+
+.drop-nav:hover{
+    background-color: #fdb915;
+    color: #04437A;
+}
+
+.drop-nav:hover > a{
+    color: #04437A;
+}
+
+.drop-nav a{
+    margin: auto;
+    display: block;
+}
+
+.subnav li{
+    width: 100%;
+}
+
+.subnav li:hover{
+    background-color: #fdb915;
+}
+.subnav li:hover a{
+    color: #04437A;
+}
+
+i {
+    padding: 0 0 0 10px;
+}
+
+.drop-nav ul{
+    padding: 0;
+    text-align: left;
+}
+
+li a {
+    padding-left: 10px;
+}
+
+/*Footer*/
+footer{
+    background-color: #910A00;
+    color: white;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1px;
+}
+
+.container img{
+    width: 20%;
+    margin-right: auto;
+}
+
+footer p{
+    margin: 0;
+    font-size: 15px;
+}
+
+.container a{
+    font-size: 15px;
+    color: white;
+}
+
+.home-nav{
+    display: none;
+}
+
+/* Media Queries */
+  @media (max-width: 900px){
+  .navbar > ul{
+        width: 50%;
+    }
+  }
+
+  @media (max-width: 750px){
+    .navbar > ul{
+        width: 75%;
+    }
+
+    .drop-nav:hover .subnav {
+        display: block;
+        font-size: 20px;
+        max-width: 70%;
+        
+        }
+  }
+
+  @media (max-width: 550px){
+    .navbar > ul{
+        width: 100%;
+    }
+
+    .navbar > a{
+        display: none;
+    }
+
+    .home-nav{
+        display: block;
+    }
+
+  }
+
+  @media (max-width: 450px){
+    .drop-nav i{
+          display: none;
+      }
+
+      .drop-nav:nth-child(even){
+        border-left: 1px solid #fdb915;
+        border-right: 1px solid #fdb915;
+      }
+
+      nav ul{
+        padding: 0;
+        margin: auto;
+      }
+
+      .subnav{
+        width: 50%;
+      }
+    }

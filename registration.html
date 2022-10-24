@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="description" content="Register for Palisade High School." />
+    <meta name="keywords" content="register, Palisade, Palisade High School, learning, start, enroll">
+    <meta name="author" content="Ryan Huffnagle, Kamran Mirza, Chenlu, Xiaocheng Sun">
+    <link rel="SHORTCUT ICON" href="./student_favicon.png" type="image/x-icon" />
+    <title>Registration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/9d64c68b0b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="registration-style.css">
+    <link rel="stylesheet" href="nav_footer.css">
+</head>
+
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class ="icon-nav-link" href="./index.html"><img src="Logo.jpeg" alt="icon"></a>
+            <ul>
+                <li class="drop-nav">Discover<i class="fa fa-caret-down"></i>
+                
+                    <ul class="subnav">
+                        <li class="home-nav"><a href="./index.html">Home</a></li>
+                        <li><a href="./welcome.html">Welcome</a></li>
+                        <li><a href="./meet_the_team.html">Meet The Team</a></li>
+                    </ul>
+                </li>
+                    
+                <li class="drop-nav">Academics<i class="fa fa-caret-down"></i>
+
+                    <ul class="subnav">
+                        <li><a href="./programs.html">Programs</a></li>
+                        <li><a href="./covid.html">Covid-19</a></li>
+                        <li><a href="./QandA.html">FAQ</a></li>
+                        <li><a href="./registration.html">Registration</a></li>
+                    </ul>
+                </li>
+                    
+                <li class="drop-nav"><a href="./testimonials.html">Testimonials</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="registration_image">
+            <div class="title">
+                <h1>Registration</h1>
+                <h2>Start Learning With Us Today!</h2>
+            </div>
+        </section>
+        
+
+        <section class="apply">
+            <h2 class="sub-head">How to Apply?</h2>
+        <p><strong>Palisades High welcomes applications throughout the academic year. See how you can get started below!</strong> </p>
+            <div class="row">
+                <div class="step">
+                    <h3>Step 1</h3>
+                    <p>Fill out the registration form below. Once we receive your application, we will be in touch to set up an in-person interview, as well as a school tour.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 2</h3>
+                    <p>Prepare for and write the admission test. Admission tests allow us to guage your current skill level, and allow us to place you in the appropriate grade.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 3</h3>
+                    <p>Come in for an interview. This gives us a chance to get to know you better, and also allows you to ask any questions that you may have.</p>
+                </div>
+
+            </div>
+            
+        </section>
+
+            <div class = "form header">
+            <!--Inline CSS-->
+            <h2 style="text-align: center; text-decoration: underline; color:#fdb915; font-size: 2em;">Online Registration Form</h2>
+            </div>
+            <p><strong> Please fill out the following information:</strong></p>
+        
+            <div class = "formContainer">
+            
+            <form class = "registrationForm" id = "registration form">
+               
+
+                <div class="firstName">
+                        <label>First Name*</label>
+                        <input id="firstName" type="text" />   
+                        
+                </div>
+
+                <div class="lastName">
+                    <label>Last Name* </label>
+                    <input type="text" id="lastName">
+                       
+                </div>
+
+                <div class="DOB" >
+                    <label>Date of Birth*</label>
+                    <input type="date" id="DOB">   
+                      
+                </div>
+
+                <div class="Email">
+                    <label>Email*</label>
+                    <input type="email" id="Email">
+                       
+                </div>
+                
+                <br>
+                <div class="Gender"> 
+                    <label>Gender*</label>
+                    <span id="radio"><input type="radio" name="Gender" value="Male"/> Male</span>
+                    <span id="radio"><input type="radio" name="Gender" value="Female"/> Female</span>
+                    <span id="radio"><input type="radio" name="Gender" value = "Other"/> Other</span>
+                </div>
+                <br>
+                <div class="profile_picture">
+                    <label id="profilepic">Upload a picture: </label>
+                    <input type="file" style="position: relative; margin-left: 100px; background-color: #04437A;">
+                </div>
+                <br>
+                <div class="foundUs">
+                    <label>How did you hear about us?  &nbsp;
+                        <select name="foundUs"> 
+                            <option id="foundUsvalue" value="">Select One</option>
+                            <option id="foundUsvalue" value="1">Friend/Family</option>
+                            <option id="foundUsvalue" value="2">Social Media</option>
+                            <option id="foundUsvalue" value="3">Newspaper</option>
+                        </select>
+
+                    </label>
+                    
+                </div>
+
+                <div class="required">
+                    <p>*Required Fields</p>
+                </div>
+                
+                <fieldset>
+
+                </fieldset>
+                <br>
+                <div class="button">
+                    <button type="submit" onclick=message()>Submit</button>
+                    
+                </div>
+                <br>
+                <div class="message">
+                    <div class="success" id="success">
+                        Thank you for your interest. Palisades High will be in touch soon!
+                    </div>
+
+                    <div class="fail" id="fail">
+                        Please fix the fields highlighted above before moving on.
+                    </div>
+
+                </div>
+            </form>
+                
+            </div>
+        </main>
+
+        <footer>
+            <div class = "container">
+                <div>
+                    <div class="contact">
+                        <p>Address: Curtis Hall, 474 Boston Ave, Medford, MA 02155</p>
+                        <a href="tel:617-627-3170">Phone: 617-627-3170</a><br>
+                        <a href = "mailto: PBPosse@tufts.edu">Email: PBPosse@tufts.edu</a>
+                    </div>
+                    <img src="Logo.jpeg" alt="">
+                </div>
+            </div>
+            
+            <p>&copy;PBPosse Ltd.</p>
+        </footer>
+
+        <!--Javascript validation for Registration Form-->
+        <script>
+
+            var firstNameCont = document.getElementsByClassName('firstName')[0];
+            var firstName = document.getElementById('firstName');
+            var lastNameCont = document.getElementsByClassName('lastName')[0];
+            var lastName = document.getElementById('lastName');
+            var DOBCont =  document.getElementsByClassName('DOB')[0];
+            var DOB = document.getElementById('DOB');
+            var emailCont = document.getElementsByClassName('Email')[0];
+            var email = document.getElementById('Email');
+            var genderCont = document.getElementsByClassName('Gender')[0];
+            var genderElem = document.getElementsByName('Gender'); 
+
+
+            function removeErrors(success, fail, firstNameCont, lastNameCont, DOBCont, emailCont, genderCont){
+                firstNameCont.classList.remove('invalid');
+                lastNameCont.classList.remove('invalid');
+                DOBCont.classList.remove('invalid');
+                emailCont.classList.remove('invalid');
+                genderCont.classList.remove('invalid');
+
+                success.style.display = 'none';
+                fail.style.display = 'none';
+            }
+
+            function validateEmail(email){
+                domainIncl = email.indexOf("@");
+                if(domainIncl > -1) return true;
+                return false;
+            }
+           
+           function message(){
+
+            const success = document.getElementById('success');
+            const fail = document.getElementById('fail');
+
+            event.preventDefault();
+            removeErrors(success, fail, firstNameCont, lastNameCont, DOBCont, emailCont, genderCont);
+
+
+            var gender = "";
+            for(i = 0; i < genderElem.length; i++){
+                if(genderElem[i].checked){
+                    gender = genderElem[i].value;
+                }
+            }
+
+                if(firstName.value === '' || lastName.value === '' || email.value == "" || gender.value == "" || DOB.value ==""){           
+                    fail.style.display = 'block';
+
+                    if(firstName.value === ''){
+                        firstNameCont.classList.add("invalid");
+                    }
+
+                    if(lastName.value === ''){
+                        lastNameCont.classList.add("invalid");
+                    }
+
+                    if(email.value == ""){
+                        emailCont.classList.add("invalid");
+                    } else{
+                        validEmail = validateEmail(email.value);
+                        if(!validEmail){
+                            emailCont.classList.add("invalid");
+                            alert("Please enter a valid email address!")
+                        }
+                    }
+
+                    if(gender.value == ""){
+                        genderCont.classList.add("invalid");
+                    }
+
+                    if(DOB.value ==""){
+                        DOBCont.classList.add("invalid");
+                    }
+                }
+
+                else{
+                    validEmail = validateEmail(email.value);
+                    if(!validEmail){
+                            emailCont.classList.add("invalid");
+                            alert("Please enter a valid email address!")
+                    } else{
+                        success.style.display = 'block';
+                    }
+                    
+                    
+                }
+            }
+
+           
+        </script>
+</body>
+
+
+</html>
+
+
+
+
+

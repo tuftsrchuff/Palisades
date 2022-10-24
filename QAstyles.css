@@ -1,0 +1,81 @@
+body {
+    background-color: #04437A;
+    color: #fdb915;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+#home-canvas{
+    background-image: url("QandA1.avif");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 4rem;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.QA-block{
+    margin: 40px auto 40px auto;
+    width: 75%;
+    background-color: #fdb915;
+    color: #04437A;
+    border-radius: 25px;
+    border-collapse: separate;
+    overflow: hidden;
+    perspective: 1px;
+    border: 5px solid #fdb915;
+    
+}
+
+.QA-block:hover{
+    background-color: #04437A;
+    color: #fdb915;
+    cursor: pointer;
+    
+}
+
+.QA-block:hover .drop-plus{
+    color: white;
+}
+
+.quest-title{
+    display: inline;
+}
+
+.drop-plus{
+    display: inline;
+    padding-right: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.clicked-val{
+    background-color: #04437A;
+    border: 5px solid #fdb915;
+    color: #fdb915;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="description" content="Programs offered at Palisade High School." />
+        <meta name="keywords" content="Palisade, Palisade High School, Math, Science, Reading, Learning, Advanced">
+        <meta name="author" content="Ryan Huffnagle, Kamran Mirza, Chenlu, Xiaocheng Sun">
+        <link rel="SHORTCUT ICON" href="./student_favicon.png" type="image/x-icon" />
+        <title>Programs</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/9d64c68b0b.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/9d64c68b0b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="styles_programs.css">
+        <link rel="stylesheet" href="nav_footer.css">
+    </head>
+    <body>
+        <script>
+            function PalisadeClass(subject, courseNum, title, description){
+                this.subject = subject;
+                this.courseNum = courseNum;
+                this.description = description;
+                this.title = title;
+            }
+
+            classes = new Array(
+                new PalisadeClass("Math", "100", "Introduction to Statistical Methods", "This course teaches you the basics of statisticss and how to find patterns in larger data sets."),
+                new PalisadeClass("Math", "105", "Introduction to Algebra", "Solve for X in a variety of ways. In due time you may even find Y!"),
+                new PalisadeClass("Math","110","Geometry", "In this course you will learn the fundamentals of geometric relationships. We will walk through Pythagoreans Theorem and how to prove basic identities in Geometry."),
+                new PalisadeClass("Science", "100", "Introduction to Biology", "This course will teach you the basics of biological principles and how to study the different biological processes around you."),
+                new PalisadeClass("Science", "105", "Introduction to Chemistry", "This course teaches you the basics of chemical reactions and how to handle chemicals in a lab setting."),
+                new PalisadeClass("Science", "450", "Advanced Nuclear Engineering", "You will be in charge of a nuclear power plant with no oversight."),
+                new PalisadeClass("Reading", "100", "American Classics", "Read some of America's most famous novels and discuss their impact on culture as a whole."),
+                new PalisadeClass("Reading", "105", "Great Works", "Dive into Shakespeare and Homer to explore works in far off lands."),
+                new PalisadeClass("Reading", "110", "Science Fiction", "Explore what Science Fiction means and why the genre has had a lasting impact on how we relate to a continously changing world."),
+                new PalisadeClass("Independent Study", "100", "Math - IS", "Independent Study in Math in a subject matter of your choice."),
+                new PalisadeClass("Independent Study", "105", "Science - IS", "Independent Study in Science in a subject matter of your choice."),
+                new PalisadeClass("Independent Study", "110", "Reading - IS", "Independent Study in Reading in a subject matter of your choice.")
+            );
+        </script>
+        <header>
+            <nav class="navbar">
+                <a class ="icon-nav-link" href="./index.html"><img src="Logo.jpeg" alt="icon"></a>
+                <ul>
+                    <li class="drop-nav">Discover<i class="fa fa-caret-down"></i>
+                    
+                        <ul class="subnav">
+                            <li class="home-nav"><a href="./index.html">Home</a></li>
+                            <li><a href="./welcome.html">Welcome</a></li>
+                            <li><a href="./meet_the_team.html">Meet The Team</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav">Academics<i class="fa fa-caret-down"></i>
+
+                        <ul class="subnav">
+                            <li><a href="./programs.html">Programs</a></li>
+                            <li><a href="./covid.html">Covid-19</a></li>
+                            <li><a href="./QandA.html">FAQ</a></li>
+                            <li><a href="./registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav"><a href="./testimonials.html">Testimonials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="program-main">
+                <div class="title">
+                    <h1>Programs</h1>
+                    <h2>Explore What We Have To Offer!</h2>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="program-classes">
+               
+            </section>
+
+            <section id="register">
+                <h2>Register Today!</h2>
+                <div class="register-div"><a href="./registration.html">Click Here To Register</a></div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class = "container">
+                <div>
+                    <div class="contact">
+                        <p>Address: Curtis Hall, 474 Boston Ave, Medford, MA 02155</p>
+                        <a href="tel:617-627-3170">Phone: 617-627-3170</a><br>
+                        <a href = "mailto: PBPosse@tufts.edu">Email: PBPosse@tufts.edu</a>
+                    </div>
+                    <img src="Logo.jpeg" alt="">
+                </div>
+            </div>
+            
+            <p>&copy;PBPosse Ltd.</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+
+            stringHTML = "";
+
+            //Have tracker of subject, while that subject loop over array and add courses under that
+            for(i=0; i < classes.length; i++){
+                if(i % 3 == 0){
+                    stringHTML += "<div class = 'subject " + classes[i].subject +" maintain'>";
+                    stringHTML += "<h3>" + classes[i].subject + "</h3>";
+                }
+                stringHTML += "<div class='course hidden'><h4>" + classes[i].title + "</h4>";
+                stringHTML += "<p>Course Number: " + classes[i].subject + " " + classes[i].courseNum + "</p>";
+                stringHTML += "<p>" + classes[i].description + "</p>";
+                stringHTML += "</div>"
+
+                if((i + 1) % 3 == 0){
+                    stringHTML += "<i class='fa-solid fa-angles-down'></i></div>";
+                }
+            }
+
+            function expandValues(){
+                $(".subject." + this.classList[1] + " .course").toggleClass("hidden");
+                $(".subject." + this.classList[1]).toggleClass("maintain");
+                $(".subject." + this.classList[1] + " i").toggleClass("fa-solid fa-angles-down fa-solid fa-angles-up");
+            }
+
+            $(document).ready(function(){
+
+                $("#program-classes").html(stringHTML);
+                
+                $(".subject").click(expandValues);
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,318 @@
+/*Setting the overall page CSS*/
+
+body {
+    background-color: #04437A;
+    color: #fdb915;
+    font-family: 'Nunito', sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+
+#registration_image{
+    background-image: url("registration.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+h1{
+    font-size: 4rem;
+    padding: 0;
+    margin: 0px;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 2rem;
+}
+.title {
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sub-head{
+    color: #fdb915;
+}
+
+strong{
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/*Applying CSS to the 3 steps*/
+
+.row{
+    margin: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row h3 {
+    color: #04437A;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 2%;
+   margin-bottom: 0%;
+   
+}
+
+/*Adding CSS to step boxes*/
+.step {
+    flex-basis: 30%;
+    border-radius: 10px;
+    background:#fdb915;
+    color: #04437A;
+    margin-bottom: 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-weight:500;    
+       }
+
+.step:hover{
+    border: 5px solid #fdb915;
+    background-color: #04437A;
+    color: #fdb915;
+    cursor: pointer;
+
+}
+
+.step:hover h3{
+    color: #fdb915;
+}
+
+.invalid{
+    border: 5px solid #910A00;
+}
+
+/*Applying CSS to make the boxes responsive*/
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+  }
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+/*Applying CSS to form inputs*/
+
+input[type="file"]::file-selector-button {
+    border: 2px solid black;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: beige;
+    transition: 1s;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+
+  input[type="file"]::file-selector-button:hover {
+    background-color: #2b8ee6;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+
+  .datepicker{
+    font-family: 'Nunito', sans-serif;
+  }
+  
+
+  select{
+    border: 2px solid black;
+    padding: 0.2em 0.4em;
+    border-radius: 0.2em;
+    background-color: beige;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+
+  }
+
+  select:hover{
+    background-color: #910A00;
+    color: white;
+    border: 2px solid black;
+    cursor: pointer;
+
+  }
+
+
+  button[type="submit"]{
+    width: 100%;
+    font-size: 18px;
+    border: 2px solid #910A00;
+    padding: 0.8em 0.8em;
+    border-radius: 25px;
+    border-collapse: separate;
+    overflow: hidden;
+    perspective: 1px;
+    background-color: #fdb915;
+    font-weight: bold;
+    transition: 1s;
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  button[type="submit"]:hover{
+    background-color: #910A00;
+    color: white;
+    border: 2px solid #fdb915;
+    cursor: pointer;
+  }
+
+form{
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vh;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+    border-bottom: 3px solid black;
+}
+
+input, date, text, email, radio{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+        
+}
+
+input, date, text, email{
+    background-color: beige;
+}
+
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.message .success{
+    color: rgb(83, 247, 83);
+    position: absolute;
+    display: none;
+}
+
+.message .fail{
+    color: rgb(252, 15, 15);
+    position: absolute;
+    display: none;
+}
+
+.formContainer{
+    margin: auto;
+    height: auto;
+    border-radius: 10px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.registrationForm{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.firstName{
+    font-size: 20px;
+}
+.firstName input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.lastName{
+    font-size: 20px;
+}
+.lastName input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.DOB{
+    font-size: 20px;
+}
+.DOB input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.Email{
+    font-size: 20px;
+}
+.Email input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.Gender{
+    font-size: 20px;
+}
+#radio {
+    width: auto;   
+    margin-right: 30px; 
+}
+
+.profile_picture{
+    font-size: 20px;
+}
+.profile_picture input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 18px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.foundUs{
+    font-size: 20px;
+}
+.foundUs input{
+    width: 80%;
+    padding: 5px 5px;
+    font-size: 30px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+
+

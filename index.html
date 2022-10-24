@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="description" content="Home page for Palisade High School." />
+        <meta name="keywords" content="Palisade, Palisade High School, High School, Education, Advanced, Learning">
+        <meta name="author" content="Ryan Huffnagle, Kamran Mirza, Chenlu, Xiaocheng Sun">
+        <link rel="SHORTCUT ICON" href="./student_favicon.png" type="image/x-icon" />
+        <title>Palisades High</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles_home.css">
+        <link rel="stylesheet" href="nav_footer.css">
+    </head>
+    <body>
+        <script>
+            function ValueItem(header, description){
+                this.header = header;
+                this.description = description;
+            }
+
+            valueItems = new Array(
+                new ValueItem("Excellence", 
+                "Our institution is one of the top ranked schools in the country."),
+                new ValueItem("Inclusiveness",
+                "We strive to include all students no matter gender, race or identity."),
+                new ValueItem("Innovation", 
+                "We engage students in state of the art research and continually use the most advanced teaching techniques."),
+                new ValueItem("Flexibility", 
+                "We want our students to engage and grow with the material. That means giving them projects of their choosing to pursue.")
+            );
+
+        </script>
+
+        <header>
+            <nav class="navbar">
+                <a class ="icon-nav-link" href="./index.html"><img src="Logo.jpeg" alt="icon"></a>
+                <ul>
+                    <li class="drop-nav">Discover<i class="fa fa-caret-down"></i>
+                    
+                        <ul class="subnav">
+                            <li class="home-nav"><a href="./index.html">Home</a></li>
+                            <li><a href="./welcome.html">Welcome</a></li>
+                            <li><a href="./meet_the_team.html">Meet The Team</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav">Academics<i class="fa fa-caret-down"></i>
+
+                        <ul class="subnav">
+                            <li><a href="./programs.html">Programs</a></li>
+                            <li><a href="./covid.html">Covid-19</a></li>
+                            <li><a href="./QandA.html">FAQ</a></li>
+                            <li><a href="./registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav"><a href="./testimonials.html">Testimonials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home-canvas">
+                <div class="title">
+                    <h1 class="hidden">Palisades High</h1>
+                    <h2 class="hidden">May Your Hats Fly As High As Your Dreams</h2>
+                </div>
+            </section>
+
+            <h2>Info</h2>
+            <section id="description" class="subsection">
+                <div class="info-links">
+                    <div class="info-sub">
+                        <div class="left-info"><img src="graduated.png" alt="graduate"></div>
+                        <div class="right-info">
+                            <h3>Why Palisades?</h3>
+                            <div><a href="./welcome.html">View More ></a></div>
+                        </div>
+                    </div>
+                    <div class="info-sub">
+                        <div class="left-info"><img src="pencil.png" alt="pencil"></div>
+                        <div class="right-info">
+                            <h3>Apply Now</h3>
+                            <div><a href="./registration.html">View More ></a></div>
+                        </div>
+                    </div>
+                    <div class="info-sub">
+                        <div class="left-info"><img src="FAQ.png" alt="FAQ"></div>
+                        <div class="right-info">
+                            <h3>FAQs</h3>
+                            <div><a href="./QandA.html">View More ></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <hr>
+
+            <section class="subsection mission-vis">
+                <div class = "mission">
+                    <h2>Mission</h2>
+                    <p>We push our students to embrace a culture of collaboration, curiosity and respect. We believe that the greatest success a student can achieve is to be endlessly curious.</p>
+                </div>
+                
+                <div class="vision">
+                    <h2>Vision</h2>
+                    <p>We strive to be an institution that pushes our students to great careers in the STEM field. The core vision centers around encouraging endless curiosity so students can pursue their own areas of interest. We strive to create lifelong learners.</p>
+                </div>
+            </section>
+
+            <hr>
+
+            <section id="values" class="subsection">
+                <h2>Values</h2>
+                <div class="values-holder">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class = "container">
+                <div>
+                    <div class="contact">
+                        <p>Address: Curtis Hall, 474 Boston Ave, Medford, MA 02155</p>
+                        <a href="tel:617-627-3170">Phone: 617-627-3170</a><br>
+                        <a href = "mailto: PBPosse@tufts.edu">Email: PBPosse@tufts.edu</a>
+                    </div>
+                    <img src="Logo.jpeg" alt="">
+                </div>
+            </div>
+            
+            <p>&copy;PBPosse Ltd.</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            //Generate values via array
+        stringHTML = "";
+        for(i = 0; i < valueItems.length; i++){
+            stringHTML+= "<div class='value " +  valueItems[i].header + " maintain'><p class='drop-plus'>+</p>";
+            stringHTML += "<h3>" + valueItems[i].header + "</h3>";
+            stringHTML += "<div class='descrip-val hidden " + valueItems[i].header  + "'>";
+            stringHTML += "<p>" + valueItems[i].description + "</p>";
+            stringHTML += "</div></div>";
+        }
+
+        $(".values-holder").append(stringHTML);
+        
+
+
+        function expandValues(){
+            $(".descrip-val" + "." +this.classList[1]).toggleClass("hidden");
+            $(".value"+ "." +this.classList[1]).toggleClass("maintain");
+            $(".value" + "." +this.classList[1]).toggleClass("clicked-val");
+        }
+
+        //Once document loaded, apply event listeners to necessary items
+        $(document).ready(function(){
+            $(".value").click(expandValues);
+            x = $(".title h1")[0];
+            $(x).fadeIn(2000);
+            x = $(".title h2")[0];
+            $(x).fadeIn(2000)
+        });
+
+        
+        </script>
+    </body>
+</html>

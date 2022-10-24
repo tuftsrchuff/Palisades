@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="description" content="Questions about Palisade High School." />
+        <meta name="keywords" content="questions, Palisade, Palisade High School, why, Math, Science, Learning, Reading">
+        <meta name="author" content="Ryan Huffnagle, Kamran Mirza, Chenlu, Xiaocheng Sun">
+        <link rel="SHORTCUT ICON" href="./student_favicon.png" type="image/x-icon" />
+        <title>FAQ</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+        </style>
+        <link rel="stylesheet" href="QAstyles.css">
+        <link rel="stylesheet" href="nav_footer.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/9d64c68b0b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a class ="icon-nav-link" href="./index.html"><img src="Logo.jpeg" alt="icon"></a>
+                <ul>
+                    <li class="drop-nav">Discover<i class="fa fa-caret-down"></i>
+                    
+                        <ul class="subnav">
+                            <li class="home-nav"><a href="./index.html">Home</a></li>
+                            <li><a href="./welcome.html">Welcome</a></li>
+                            <li><a href="./meet_the_team.html">Meet The Team</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav">Academics<i class="fa fa-caret-down"></i>
+
+                        <ul class="subnav">
+                            <li><a href="./programs.html">Programs</a></li>
+                            <li><a href="./covid.html">Covid-19</a></li>
+                            <li><a href="./QandA.html">FAQ</a></li>
+                            <li><a href="./registration.html">Registration</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li class="drop-nav"><a href="./testimonials.html">Testimonials</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <script>
+            function Question(question, answer){
+                this.question = question;
+                this.answer = answer;
+            }
+
+            questions = new Array(
+                new Question("Why Palisades High?", 
+                "We offer a unique blend of rigorous academics and an open curriculum for students to pursue their greatest passions."),
+                new Question("What can you learn from here?", 
+                "We offer a diverse set of courses in Math, Science, Reading and independent studies through our faculty."),
+                new Question("Can you take courses asynchronously?", 
+                "Yes! We offer a multitude of courses online and in person. We believe in a flexible curriculum."),
+                new Question("What courses are offered?", 
+                "Please check out our Programs page to see the specific courses we offer."),
+                new Question("Do you have specific Covid policies in place?", 
+                "Yes! Please check out our Covid page for up to date information regarding our Covid policies."),
+                new Question("What are the class sizes?", 
+                "We believe in an intimate learning environment. Class sizes will on average be 15 - 20 students per teacher.")
+            );
+        </script>
+        <main>
+            <section id="home-canvas">
+                <div class="title">
+                    <h1>FAQ</h1>
+                    <h2>Help us help you...</h2>
+                    
+                </div>
+            </section>
+
+            <h2>We Are Here To Help!</h2>
+            
+            <section id="questions">           
+                
+            </section>
+        </main>
+
+        <footer>
+            <div class = "container">
+                <div>
+                    <div class="contact">
+                        <p>Address: Curtis Hall, 474 Boston Ave, Medford, MA 02155</p>
+                        <a href="tel:617-627-3170">Phone: 617-627-3170</a><br>
+                        <a href = "mailto: PBPosse@tufts.edu">Email: PBPosse@tufts.edu</a>
+                    </div>
+                    <img src="Logo.jpeg" alt="">
+                </div>
+            </div>
+            
+            <p>&copy;PBPosse Ltd.</p>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script>
+        stringHTML = "";
+        for(i = 0; i < questions.length; i++){
+            stringHTML+= "<div class='QA-block q" +  i + "'><p class='drop-plus'>+</p>";
+            stringHTML += "<p class='quest-title'>" + questions[i].question + "</p>";
+            stringHTML += "<p class='answer-block q" + i + " hidden'>" + questions[i].answer + "</p>";
+            stringHTML += "</div>";
+        }
+
+        $("#questions").append(stringHTML);
+        
+
+
+        function expandValues(){
+            $(".QA-block" + "." +this.classList[1] + " .answer-block").toggleClass("hidden");
+            $(".QA-block" + "." +this.classList[1]).toggleClass("clicked-val");
+        }
+
+        //Once document loaded, apply event listeners to necessary items
+        $(document).ready(function(){
+            $(".QA-block").click(expandValues);
+        });
+
+        </script>
+    </body>
+</html>
